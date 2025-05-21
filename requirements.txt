@@ -1,5 +1,17 @@
-Flask==2.3.3
-Flask-SQLAlchemy==3.1.1
-Werkzeug==2.3.7
-SQLAlchemy==2.0.21
-Flask-Login==0.6.2
+Flask>=2.0.0
+Flask_SQLAlchemy>=2.5.1
+gunicorn>=20.0.4              # Optional: for deployment
+python-dotenv                 # Optional: manage environment variables
+itsdangerous>=2.0.1           # Flask dependency (sessions/security)
+Jinja2>=3.0.0                 # Flask templates
+Werkzeug>=2.0.0               # WSGI utility library for Flask
+MarkupSafe>=2.0.0             # Used by Jinja2
+click>=8.0.0                  # Flask CLI support
+
+# Optional and common extras:
+requests                      # For HTTP requests (if used)
+firebase-admin                # If you're using Firebase
+opencv-python                 # If you're working with camera/video
+pillow                        # Image processing
+eventlet                     # For async Flask servers (socket, etc.)
+gevent                       # Another async option
